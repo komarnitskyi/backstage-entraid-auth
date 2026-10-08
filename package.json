@@ -1,0 +1,38 @@
+{
+  "name": "@internal/plugin-auth-backend-module-microsoft-certificate-provider",
+  "version": "0.1.0",
+  "description": "Microsoft/Entra ID auth provider backend module for Backstage, authenticating as a confidential client with a certificate (private_key_jwt) instead of a client secret.",
+  "backstage": {
+    "role": "backend-plugin-module",
+    "pluginId": "auth",
+    "pluginPackage": "@backstage/plugin-auth-backend"
+  },
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "config.d.ts"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "lint": "tsc --noEmit",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@backstage/backend-plugin-api": "^1.10.1",
+    "@backstage/plugin-auth-node": "^0.7.6",
+    "@backstage/types": "^1.2.2",
+    "jose": "^5.10.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.4.0"
+  },
+  "configSchema": "config.d.ts"
+}

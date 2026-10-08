@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.log
+*.zip
+
+# Real certificate/key material for the test tenant - never commit these.
+# (src/__tests__/fixtures/*.pem are throwaway test-only fixtures and are fine.)
+/key.pem
+/key.pkcs8.pem
+/cert.pem
